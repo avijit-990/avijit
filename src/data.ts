@@ -81,12 +81,26 @@ export const CERTIFICATIONS: Certification[] = [
     ]
   },
   {
+    id: 'cert-ms-copilot-use-cases',
+    title: 'Microsoft 365 Copilot Use Cases',
+    issuer: 'Microsoft',
+    date: 'May 2026',
+    image: 'https://github.com/avijit-990/portfolio-assets/blob/main/Microsoft%20365%20Copilot_Certificate.png?raw=true', 
+    verificationId: 'h2xgph68',
+    link: 'https://learn.microsoft.com/en-us/users/avijitkarmokar-9839/',
+    highlights: [
+      'Explored practical use cases for integrating Microsoft 365 Copilot into daily administrative and creative workflows.',
+      'Learned strategies to empower workforce productivity and automate routine tasks using AI-driven tools.',
+      'Examined real-world applications of generative AI across the core Microsoft 365 ecosystem.'
+    ]
+  },
+  {
     id: 'cert-speak-to-win',
     title: 'Speak To Win: Season 1',
     issuer: 'Seenjoy Academy',
     date: 'May 2026',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBAMKQyKrszfjGGs7HGjV2Whzd-IHrLQU9OZDbBRWF2_wD53UDOOhr6r1YorSliyQokGiMX8HX99R4Kw-Hd0jFhRnm1X1iwrCLUGklS_Z2Cr_1eWRm79fJLuIoMthIDt7PmYKIntmUJ68_Hh3d6_8F8pU12SB9ImRoaHKgpJMYU09AqN6hwq6digu5KTfPP-Ok9mfMJINOqbdNbSMmCAh3DzF-tqc2lngKxW00S905eGkYeZ1LbeSQK-NZuA1RyH5tQZwJChfOkd7x8',
-    verificationId: 'STW-S1-2026-SA01',
+    verificationId: 'STW-2026-05025',
     highlights: [
       'Completed masterclasses on persuasive presentation and structural speech architectures.',
       'Acquired expert-level tactics to manage vocal projections, body gestures, and target crowd triggers.',
