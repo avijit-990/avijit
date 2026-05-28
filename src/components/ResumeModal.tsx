@@ -420,7 +420,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   <div className="flex-shrink-0 relative">
                     <div className="w-[100px] h-[100px] md:w-[110px] md:h-[110px] rounded-full overflow-hidden border-4 border-white/20 shadow-lg bg-zinc-800 flex items-center justify-center relative">
                       <img 
-                        src="/screen.png" 
+                        src="/avijit/screen.png" 
                         alt="Avijit Karmokar"
                         className="w-full h-full object-cover"
                         onError={(e) => {
