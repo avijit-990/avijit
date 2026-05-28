@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-accent: var(--accent);
+  --color-brand-accent-hover: var(--accent-hover);
+  --color-brand-accent-bg: var(--accent-bg);
+  --color-brand-accent-border: var(--accent-border);
+  --color-brand-accent-glow: var(--accent-glow);
+  --color-brand-accent-solid: var(--accent-solid);
+  --color-brand-accent-solid-text: var(--accent-solid-text);
+}
+
+/* Base theme properties */
+:root {
+  --bg-app: #131315;
+  --bg-footer: #0e0e11;
+  --bg-card: #181c24;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-hover: rgba(255, 255, 255, 0.15);
+  --text-primary: #e4e2e4;
+  --text-secondary: #a1a1aa;
+  --text-heading: #ffffff;
+  --nav-bg: rgba(0, 0, 0, 0.2);
+  --nav-backdrop-color: rgba(19, 19, 21, 0.8);
+  --grid-color: rgba(255, 255, 255, 0.015);
+  
+  --terminal-bg: rgba(22, 22, 25, 0.7);
+  --terminal-header-border: rgba(255, 255, 255, 0.05);
+  --terminal-body: rgba(0, 0, 0, 0.4);
+  --terminal-border: rgba(255, 255, 255, 0.1);
+  --terminal-tab-inactive: #71717a;
+  
+  --card-gradient-from: #161619;
+  --card-gradient-to: rgba(24, 24, 27, 0.4);
+  
+  --input-bg: rgba(0, 0, 0, 0.4);
+  --input-border: rgba(255, 255, 255, 0.1);
+  --input-text: #e4e2e4;
+  --input-placeholder: #52525b;
+
+  /* Accent variable definitions - Vibrant Electric Cyan */
+  --accent: #22d3ee;
+  --accent-hover: #06b6d4;
+  --accent-bg: rgba(6, 182, 212, 0.1);
+  --accent-border: rgba(6, 182, 212, 0.25);
+  --accent-glow: rgba(6, 182, 212, 0.15);
+  --accent-solid: #06b6d4;
+  --accent-solid-text: #083344;
+}
+
+/* High Contrast Light theme switcher properties */
+.light {
+  --bg-app: #f4f6f8;
+  --bg-footer: #e9ecef;
+  --bg-card: #ffffff;
+  --border-color: rgba(15, 23, 42, 0.12);
+  --border-color-hover: rgba(15, 23, 42, 0.22);
+  --text-primary: #334155;
+  --text-secondary: #475569;
+  --text-heading: #0f172a;
+  --nav-bg: rgba(255, 255, 255, 0.6);
+  --nav-backdrop-color: rgba(244, 246, 248, 0.85);
+  --grid-color: rgba(15, 23, 42, 0.03);
+  
+  --terminal-bg: rgba(248, 250, 252, 0.95);
+  --terminal-header-border: rgba(15, 23, 42, 0.08);
+  --terminal-body: #ffffff;
+  --terminal-border: rgba(15, 23, 42, 0.12);
+  --terminal-tab-inactive: #64748b;
+  
+  --card-gradient-from: #ffffff;
+  --card-gradient-to: #f8fafc;
+  
+  --input-bg: #ffffff;
+  --input-border: rgba(15, 23, 42, 0.15);
+  --input-text: #0f172a;
+  --input-placeholder: #94a3b8;
+
+  /* Accent variable definitions - Deep Readable Cyan */
+  --accent: #0891b2;
+  --accent-hover: #0369a1;
+  --accent-bg: rgba(8, 145, 178, 0.08);
+  --accent-border: rgba(8, 145, 178, 0.2);
+  --accent-glow: rgba(8, 145, 178, 0.1);
+  --accent-solid: #0891b2;
+  --accent-solid-text: #ffffff;
+}
+
+/* Glassmorphism utility helpers */
+.glass-panel {
+  background-color: rgba(22, 22, 25, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.light .glass-panel {
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 30px rgba(15, 23, 42, 0.03);
+}
+
+/* Scroll improvements */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-app);
+}
+
+/* Highlight focus outlines */
+.input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
+
+.light .input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
+
+/* Background gradient glows */
+.radial-glow-accent {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.13) 0%, rgba(6, 182, 212, 0) 70%);
+}
+
+.radial-glow-indigo {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.11) 0%, rgba(99, 102, 241, 0) 70%);
+}
+
+.light .radial-glow-accent {
+  background: radial-gradient(circle, rgba(8, 145, 178, 0.04) 0%, rgba(8, 145, 178, 0) 75%);
+}
+
+.light .radial-glow-indigo {
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.03) 0%, rgba(99, 102, 241, 0) 75%);
+}
+
+/* ==========================================================================
+   COSMIC BUTTON NEON STYLING & SONAR ANIMATIONS
+   As requested: Dark semi-transparent pill, glowing cyan/blue border, 
+   glowing cyan text, and pure CSS concentric sonar circles.
+   ========================================================================== */
+
+@keyframes cosmic-sonar-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.65);
+    opacity: 0;
+  }
+}
+
+.cosmic-sonar-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  border: 1.5px solid rgba(34, 211, 238, 0.45);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+  pointer-events: none;
+  opacity: 0;
+  z-index: -10;
+  transition: all 0.3s ease;
+}
+
+/* Base button styles */
+.cosmic-neon-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  
+  /* Dark semi-transparent background */
+  background: rgba(10, 10, 15, 0.82) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  
+  /* Glowing cyan/blue neon border */
+  border: 1.5px solid rgba(6, 182, 212, 0.65) !important;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.25), inset 0 0 6px rgba(6, 182, 212, 0.15);
+  
+  /* Glowing cyan text and items */
+  color: #22d3ee !important;
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+  
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Icon / SVG glowing styling */
+.cosmic-brand-icon {
+  color: #22d3ee !important;
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.7));
+  transition: transform 0.3s ease;
+}
+
+/* Hover behaviors */
+.cosmic-neon-pill-btn:hover {
+  border-color: #22d3ee !important;
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.65), inset 0 0 10px rgba(34, 211, 238, 0.25);
+  transform: translateY(-2.5px);
+  color: #ffffff !important;
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.85);
+}
+
+.cosmic-neon-pill-btn:hover .cosmic-brand-icon {
+  transform: scale(1.15);
+  color: #ffffff !important;
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.9));
+}
+
+.cosmic-neon-pill-btn:active {
+  transform: translateY(0.5px) scale(0.97);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+}
+
+/* Active animation trigger */
+.cosmic-neon-pill-btn:hover .cosmic-sonar-circle-1,
+.cosmic-neon-pill-btn:active .cosmic-sonar-circle-1 {
+  animation: cosmic-sonar-ripple 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.cosmic-neon-pill-btn:hover .cosmic-sonar-circle-2,
+.cosmic-neon-pill-btn:active .cosmic-sonar-circle-2 {
+  animation: cosmic-sonar-ripple 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+  animation-delay: 0.6s;
+}
+
+.cosmic-neon-pill-btn:hover .cosmic-sonar-circle-3,
+.cosmic-neon-pill-btn:active .cosmic-sonar-circle-3 {
+  animation: cosmic-sonar-ripple 1.8s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+  animation-delay: 1.2s;
+}
+
