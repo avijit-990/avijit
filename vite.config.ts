@@ -11,7 +11,14 @@ export default defineConfig(() => {
       react(), 
       tailwindcss(),
       Sitemap({
-        hostname: 'https://avijit-990.github.io/avijit/'
+        hostname: 'https://avijit-990.github.io',
+        dynamicRoutes: [
+          '/avijit/' // Forces the correct GitHub Pages subfolder path
+        ],
+        exclude: [
+          '/', // Removes the incorrect root URL
+          '/google4801c7141dc24df1' // Prevents indexing the Google verification file
+        ]
       })
     ],
     resolve: {
