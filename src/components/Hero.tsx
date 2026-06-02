@@ -39,9 +39,9 @@ export default function Hero({ onProjectsClick, onContactClick }: HeroProps) {
               <img 
                 alt="Avijit" 
                 className="w-full h-full object-cover select-none scale-102 hover:scale-105 transition-transform duration-500" 
-                src="/avijit/screen.png"
+                src="/screen.png"
                 onError={(e) => {
-                  // Return fallback image if /avijit/screen.png is not loaded/cached yet to remain robust
+                  // Return fallback image if /screen.png is not loaded/cached yet to remain robust
                   e.currentTarget.src = "https://lh3.googleusercontent.com/aida-public/AB6AXuAjQWrvwMVPVt6qeLUrniu2VRxW5imlSka3z2_WsNJyhSWh5EFA9QXNtjEEs0rMLc79x_pIJScA3eCzWvZgkKzECktVdbTTiXXj0XjEZH7IoM8lwC0_xnG2l6gCt7k8fEUNGvuc_lWII6hXnU1FpDwKG5OemlBxASRrSQmTDnm19mbJKMtglttTuQovZZHQ0rCSmFP5MwfO-rr8m3dktdqop7-xO11j-A1EFbo1e3lJQETHhBsrvZQHGmtjPqERqN1osAm6cSPf6CVX";
                 }}
                 referrerPolicy="no-referrer"
