@@ -122,16 +122,17 @@ export const CERTIFICATIONS: Certification[] = [
     ]
   },
   {
-    id: 'cert-cyber-hygiene',
-    title: 'Cyber Hygiene Training',
-    issuer: 'The Asia Foundation & SAJIDA Foundation',
-    date: 'May 2026',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCsqY_Or11m3pKRqs9HKcjXOnJcSek_g6Tk43P1k5xe5eGyi8x_NRPyiE4NklRBBnGGVn1q4YBeaH0g719Wi_g83sP2WqVOBGIrHieBJYMozj9K5ixfEtvLmPaxirvKX-tWxKD7XhKwNCu0Yzn2olNnkaSCvQrjS5IB9cnUA4caMvDOQTlPt8AtPZl9PSISY5Dfb8zMz5X7YSTl-J-F8DkUnPtx70d1DnmMxT0VJMDVIhN8vk8AW0Ay0ZDG7uiCeaxwujTEUi7S3Bou',
-    verificationId: 'TAF-SF-CH-4856',
+    id: 'cert-opswat-cip',
+    title: 'Introduction to Critical Infrastructure Protection (CIP)', // 
+    issuer: 'OPSWAT', // 
+    date: 'June 2026', // 
+    image: 'https://raw.githubusercontent.com/avijit-990/portfolio-assets/refs/heads/main/introduction_to_cip.png', // Update with a hosted image/thumbnail of the PDF
+    verificationId: 'RD58idHxwQ', // 
+    link: 'https://learn.opswatacademy.com/certificate/RD58idHxwQ', // 
     highlights: [
-      'Understood complex defense structures, phishing mechanisms, and multi-factor security layers.',
-      'Studied strict identity mapping policies, password vaults setups, and network payload vetting processes.',
-      'Analyzed standards to mitigate social engineering schemes.'
+      'Explored foundational concepts of Critical Infrastructure Protection (CIP) and IT/OT security convergence.',
+      'Learned methodologies for securing critical environments against cyber threats and maintaining operational resilience.',
+      'Understood compliance standards and best practices for safeguarding essential physical and cyber systems.'
     ]
   }
 ];
