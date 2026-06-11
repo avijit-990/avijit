@@ -81,6 +81,20 @@ export const CERTIFICATIONS: Certification[] = [
     ]
   },
   {
+    id: 'cert-ms-security-copilot',
+    title: 'Mitigate threats using Microsoft Security Copilot',
+    issuer: 'Microsoft',
+    date: 'June 2026',
+    image: 'https://raw.githubusercontent.com/avijit-990/portfolio-assets/refs/heads/main/Mitigate%20threats%20using%20Microsoft%20Security%20Copilot.png', //hosted image URL ( GitHub raw link)
+    verificationId: 'feved8ex',
+    link: 'https://learn.microsoft.com/en-us/users/avijitkarmokar-9839/',
+    highlights: [
+      'Learned to utilize Microsoft Security Copilot to rapidly identify, analyze, and mitigate cybersecurity threats.',
+      'Explored AI-driven incident response workflows and threat intelligence gathering within the Microsoft ecosystem.',
+      'Gained practical knowledge in applying generative AI to enhance security operations and active defense mechanisms.'
+    ]
+  },
+  {
     id: 'cert-ms-copilot-use-cases',
     title: 'Microsoft 365 Copilot Use Cases',
     issuer: 'Microsoft',
